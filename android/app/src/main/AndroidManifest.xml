@@ -21,7 +21,7 @@
     </queries>
     <application
         android:icon="@mipmap/ic_launcher"
-        android:label="TicTacToe"
+        android:label="CrossQuest"
         android:usesCleartextTraffic="true">
 
         <activity

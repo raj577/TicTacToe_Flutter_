@@ -72,24 +72,24 @@ class _LoginWithEmailState extends State<LoginWithEmail> {
             utils.showCircularProgress(isLoading, secondarySelectedColor),
             Platform.isIOS
                 ? Positioned.directional(
-                    textDirection: Directionality.of(context),
-                    start: 5.0,
-                    top: 30.0,
-                    child: Container(
-                      height: 35,
-                      width: 35,
-                      decoration: BoxDecoration(
-                          color: Colors.white.withValues(alpha: 0.5),
-                          borderRadius: BorderRadius.circular(10)),
-                      child: FittedBox(
-                        child: IconButton(
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
-                          icon: Icon(Icons.arrow_back_ios_outlined, size: 30),
-                        ),
-                      ),
-                    ))
+                textDirection: Directionality.of(context),
+                start: 5.0,
+                top: 30.0,
+                child: Container(
+                  height: 35,
+                  width: 35,
+                  decoration: BoxDecoration(
+                      color: Colors.white.withValues(alpha: 0.5),
+                      borderRadius: BorderRadius.circular(10)),
+                  child: FittedBox(
+                    child: IconButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      icon: Icon(Icons.arrow_back_ios_outlined, size: 30),
+                    ),
+                  ),
+                ))
                 : Container()
           ],
         ),
@@ -221,13 +221,13 @@ class _LoginWithEmailState extends State<LoginWithEmail> {
           suffixIcon: IconButton(
             icon: isPwdHidden
                 ? const Icon(
-                    Icons.visibility,
-                    size: 20.0,
-                  )
+              Icons.visibility,
+              size: 20.0,
+            )
                 : const Icon(
-                    Icons.visibility_off,
-                    size: 20.0,
-                  ),
+              Icons.visibility_off,
+              size: 20.0,
+            ),
             onPressed: () {
               setState(() {
                 isPwdHidden = !isPwdHidden;
@@ -268,49 +268,7 @@ class _LoginWithEmailState extends State<LoginWithEmail> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Platform.isIOS
-              ? Row(
-                  children: [
-                    InkWell(
-                      onTap: () async {
-                        Auth.signin(context, false, "IOS");
-                      },
-                      child: Container(
-                        width: MediaQuery.of(context).size.width * 0.13,
-                        height: MediaQuery.of(context).size.height * 0.06,
-                        decoration: BoxDecoration(
-                          color: white,
-                          borderRadius: BorderRadius.circular(5.0),
-                        ),
-                        padding: const EdgeInsets.all(10),
-                        child: getSvgImage(imageName: 'apple_icon'),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 10.0,
-                    )
-                  ],
-                )
-              : Container(),
-          InkWell(
-            onTap: () async {
-              await Auth.signin(context, false, "Android",
-                  email: "", password: "");
-            },
-            child: Container(
-              width: MediaQuery.of(context).size.width * 0.13,
-              height: MediaQuery.of(context).size.height * 0.06,
-              decoration: BoxDecoration(
-                color: white,
-                borderRadius: BorderRadius.circular(5.0),
-              ),
-              padding: const EdgeInsets.all(10),
-              child: getSvgImage(imageName: 'google_logo'),
-            ),
-          ),
-          const SizedBox(
-            width: 10.0,
-          ),
+          // Apple and Google sign-in options have been removed.
           InkWell(
             onTap: () async {
               await Auth.anonymousSignin(context);
@@ -329,31 +287,6 @@ class _LoginWithEmailState extends State<LoginWithEmail> {
           const SizedBox(
             width: 10.0,
           ),
-          /*  Expanded(
-            child: InkWell(
-                child: Container(
-                  height: MediaQuery
-                      .of(context)
-                      .size
-                      .height * 0.06,
-                  decoration: BoxDecoration(
-                    color: white,
-                    borderRadius: BorderRadius.circular(5.0),
-                  ),
-                  child: Center(
-                      child: Text(
-                        utils.getTranslated(context, "signIn")!,
-                        style: TextStyle(color: primaryColor, fontSize: 20),
-                        overflow: TextOverflow.ellipsis,
-                      )),
-                ),
-                onTap: () {
-                  setState(() {
-                    isLoading = true;
-                  });
-                  validateAndSubmit();
-                }),
-          ),*/
         ],
       ),
     );
@@ -432,10 +365,10 @@ class _LoginWithEmailState extends State<LoginWithEmail> {
             ),
             child: Center(
                 child: Text(
-              utils.getTranslated(context, "signIn"),
-              style: TextStyle(color: primaryColor, fontSize: 20),
-              overflow: TextOverflow.ellipsis,
-            )),
+                  utils.getTranslated(context, "signIn"),
+                  style: TextStyle(color: primaryColor, fontSize: 20),
+                  overflow: TextOverflow.ellipsis,
+                )),
           ),
         ),
         onTap: () {

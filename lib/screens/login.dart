@@ -68,45 +68,13 @@ class _AuthOptionsScreenState extends State<Login> {
             ),
             Platform.isIOS
                 ? Container(
-                    height: MediaQuery.of(context).size.height * 0.06,
-                    width: MediaQuery.of(context).size.width,
-                    padding: const EdgeInsets.symmetric(horizontal: 40.0),
-                    child: ElevatedButton.icon(
-                      style: ButtonStyle(
-                        backgroundColor: WidgetStateProperty.resolveWith<Color>(
-                          (Set<WidgetState> states) {
-                            if (states.contains(WidgetState.pressed))
-                              return secondarySelectedColor;
-                            return white;
-                          },
-                        ),
-                      ),
-                      onPressed: () async {
-                        Auth.signin(context, false, "IOS");
-                      },
-                      icon: getSvgImage(imageName: 'apple_icon'),
-                      label: Center(
-                        child: Text(
-                          utils.getTranslated(context, "signInApple"),
-                          style: TextStyle(
-                            color: primaryColor,
-                          ),
-                        ),
-                      ),
-                    ),
-                  )
-                : Container(),
-            SizedBox(height: 10.0),
-            Container(
               height: MediaQuery.of(context).size.height * 0.06,
               width: MediaQuery.of(context).size.width,
-              padding: const EdgeInsets.symmetric(
-                horizontal: 40.0,
-              ),
+              padding: const EdgeInsets.symmetric(horizontal: 40.0),
               child: ElevatedButton.icon(
                 style: ButtonStyle(
                   backgroundColor: WidgetStateProperty.resolveWith<Color>(
-                    (Set<WidgetState> states) {
+                        (Set<WidgetState> states) {
                       if (states.contains(WidgetState.pressed))
                         return secondarySelectedColor;
                       return white;
@@ -114,23 +82,23 @@ class _AuthOptionsScreenState extends State<Login> {
                   ),
                 ),
                 onPressed: () async {
-                  Auth.signin(context, false, "Android",
-                      email: "", password: "");
+                  Auth.signin(context, false, "IOS");
                 },
-                icon: getSvgImage(imageName: "google_logo"),
+                icon: getSvgImage(imageName: 'apple_icon'),
                 label: Center(
                   child: Text(
-                    utils.getTranslated(context, "signInGoogle"),
+                    utils.getTranslated(context, "signInApple"),
                     style: TextStyle(
                       color: primaryColor,
                     ),
                   ),
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 10.0,
-            ),
+            )
+                : Container(),
+            // The Google Sign-In button has been removed as requested.
+            // The following SizedBox was also removed for a cleaner layout.
+            // SizedBox(height: 10.0),
             Container(
               height: MediaQuery.of(context).size.height * 0.06,
               width: MediaQuery.of(context).size.width,
@@ -138,7 +106,7 @@ class _AuthOptionsScreenState extends State<Login> {
               child: ElevatedButton.icon(
                 style: ButtonStyle(
                   backgroundColor: WidgetStateProperty.resolveWith<Color>(
-                    (Set<WidgetState> states) {
+                        (Set<WidgetState> states) {
                       if (states.contains(WidgetState.pressed))
                         return secondarySelectedColor;
                       return white;
@@ -172,7 +140,7 @@ class _AuthOptionsScreenState extends State<Login> {
               child: ElevatedButton.icon(
                 style: ButtonStyle(
                   backgroundColor: WidgetStateProperty.resolveWith<Color>(
-                    (Set<WidgetState> states) {
+                        (Set<WidgetState> states) {
                       if (states.contains(WidgetState.pressed))
                         return secondarySelectedColor;
                       return white;
