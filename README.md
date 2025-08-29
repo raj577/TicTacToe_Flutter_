@@ -1,16 +1,31 @@
-# TicTacToe
+CrossQuest
+<p align="center">
+<img src="path/to/your/app_icon.png" width="150" alt="CrossQuest App Icon">
+</p>
 
-A new Flutter project.
+A classic Tic-Tac-Toe game built with Flutter. Challenge a friend or test your skills against a smart AI in this clean and modern mobile app.
 
-## Getting Started
+✨ Features
+Single Player: Play against an intelligent AI opponent.
 
-This project is a starting point for a Flutter application.
+Two Player: Compete with a friend on the same device.
 
-A few resources to get you started if this is your first Flutter project:
+Elegant UI: A sleek, minimalist user interface built with Material Design.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Responsive Layout: Optimized for various screen sizes on Android devices.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Intuitive Gameplay: Simple and easy to pick up for all ages.
+
+📸 Screenshots
+Add your app screenshots here to showcase the UI.
+
+🛠️ Technology Stack
+Flutter: The UI toolkit used for cross-platform development.
+
+Dart: The programming language powering the application.
+
+🚀 Getting Started
+Prerequisites
+Flutter SDK
+
+An Android device or emulator

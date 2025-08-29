@@ -63,7 +63,7 @@ final defaultXskin = "cross_skin";
 final defaultOskin = "circle_skin";
 
 //-- Add your app store application id here
-final String appStoreId = '6460890750';
+final String appStoreId = '646089050';
 
 final String appFind = "You can find our app from below url \nAndroid:";
 
