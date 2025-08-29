@@ -28,6 +28,7 @@ def keystorePropertiesFile = rootProject.file("key.properties")
 if (keystorePropertiesFile.exists()) {
     keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 }
+println "👉 Keystore file path: ${keystoreProperties['storeFile']}"
 
 android {
     namespace "com.tictac.probeinc.TicTacToe"
