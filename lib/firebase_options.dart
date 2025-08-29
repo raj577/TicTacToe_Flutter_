@@ -58,12 +58,12 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBW38ZiAGa5hUUcQ4NqBfDebniS2_aqCjU',
-    appId: '1:35348409332:android:68d698d2fd25d46ed767a1',
-    messagingSenderId: '35348409332',
-    projectId: 'tictact-a37a5',
-    databaseURL: 'https://tictact-a37a5-default-rtdb.firebaseio.com',
-    storageBucket: 'tictact-a37a5.appspot.com',
+    apiKey: 'AIzaSyCkFA-v9A8wi-2otCwgsxHrfZDJDrLlNIA',
+    appId: '1:652788200413:android:126ffca27e30f17a47bc34',
+    messagingSenderId: '652788200413',
+    projectId: 'crossquest-4fa4f',
+    databaseURL: 'https://crossquest-4fa4f-default-rtdb.firebaseio.com',
+    storageBucket: 'crossquest-4fa4f.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(

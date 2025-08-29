@@ -30,13 +30,13 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    namespace "com.tictac.wrteam.TicTacToe"
+    namespace "com.tictac.probeinc.TicTacToe"
 
     // ✅ Updated to SDK 36
     compileSdk = 36
 
     defaultConfig {
-        applicationId "com.tictac.wrteam.TicTacToe"
+        applicationId "com.tictac.probeinc.TicTacToe"
         minSdk = flutter.minSdkVersion
         targetSdk = 36   // ✅ Updated
         versionCode flutterVersionCode.toInteger()
